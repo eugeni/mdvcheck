@@ -1,0 +1,13 @@
+MDVCHECK
+--------
+
+Simple conflicts checking script.
+
+Usage: finddups.py <urpmf search terms>
+
+For example:
+  finddups.py '/usr/share/man --media Main'
+  (will search for duplicated man pages in Main media)
+
+  finddups.py /usr/share/doc
+  (will search for duplicated docs in all medias)
