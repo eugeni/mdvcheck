@@ -18,9 +18,9 @@ def find_dups_digest(digests):
                 files[f] = (pkg, digest)
             else:
                 # skip conflicts with self due to duplicates
-                if pkg == files[f]:
-                    continue
                 old_pkg, old_digest = files[f]
+                if pkg == old_pkg:
+                    continue
                 if digest != old_digest:
                     dupe = (pkg, old_pkg)
                     if dupe not in dupes:
