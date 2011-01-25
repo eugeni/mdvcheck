@@ -16,7 +16,7 @@ foreach my $hdlist (@hdlists) {
 $urpm->traverse(sub {
 	my ($pkg) = @_;
 
-	my $pname = $pkg->fullname;
+	my $pname = $pkg->name;
 	my @digests = $pkg->files_digest();
 	my @files = $pkg->files();
 	my $i = 0;

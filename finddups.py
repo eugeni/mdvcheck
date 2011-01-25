@@ -7,6 +7,7 @@ import sys
 import os
 
 def find_dups(pattern):
+    """Finds duplicated files in packages"""
     files = {}
     dupes = {}
     with os.popen("urpmf %s" % pattern, "r") as fd:
